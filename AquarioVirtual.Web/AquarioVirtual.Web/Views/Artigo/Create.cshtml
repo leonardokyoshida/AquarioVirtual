@@ -1,0 +1,94 @@
+﻿@model AquarioVirtual.Web.Models.Artigo
+@{
+    ViewBag.Title = "Create";
+}
+
+@section css{
+    @Styles.Render("http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css")
+    <link href="~/Content/articleDetails.css" rel="stylesheet" />
+    <link href="~/Content/123.css" rel="stylesheet" />
+
+}
+@using (Html.BeginForm("Create", "Artigo", FormMethod.Post,new { @encType = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <div class="text-left content-article">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="fh5co-highlight animate-box ">
+                        <div class="modal-header">
+                            <h3>Dados Gerais</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <ul class="project-info ">
+                                    <li><h6>@Html.HiddenFor(x => x.Id)</h6>@Html.HiddenFor(x => x.Id)</li>
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.Nome)</h6>@Html.TextBoxFor(x => x.Peixe.Nome)</li>
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.NomeCientifico)</h6>@Html.TextBoxFor(x => x.Peixe.NomeCientifico)</li>
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.PH)</h6>@Html.TextBoxFor(x => x.Peixe.PH)</li>
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.Familia)</h6>@Html.TextBoxFor(x => x.Peixe.Familia)</li>
+                                    <li><h6>Imagem: <input type="file" name="fileFoto" id="fileFoto"/></h6></li>
+                                    
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <ul class="project-info">
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.Tamanho)</h6>@Html.TextBoxFor(x => x.Peixe.Tamanho)</li>
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.Temperatura)</h6>@Html.TextBoxFor(x => x.Peixe.Temperatura)</li>
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.TamanhoAquario)</h6>@Html.TextBoxFor(x => x.Peixe.TamanhoAquario)</li>
+                                    <li><h6>@Html.LabelFor(x => x.Peixe.Habitat)</h6>@Html.TextBoxFor(x => x.Peixe.Habitat)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            @*<h2>Dados Gerais</h2>
+                @Html.LabelFor(x => x.Peixe.PH, "PH")
+                @Html.TextBoxFor(x => x.Peixe.PH)
+
+                @Html.LabelFor(x => x.Peixe.Tamanho, "Tamanho")
+                @Html.TextBoxFor(x => x.Peixe.Tamanho)
+
+                @Html.LabelFor(x => x.Peixe.TamanhoAquario, "Aquario Recomendado")
+                @Html.TextBoxFor(x => x.Peixe.TamanhoAquario)
+
+                @Html.LabelFor(x => x.Peixe.Temperatura, "Temperatura")
+                @Html.TextBoxFor(x => x.Peixe.Temperatura)
+
+                @Html.LabelFor(x => x.Peixe.Habitat, "Habitat")
+                @Html.TextBoxFor(x => x.Peixe.Habitat)
+
+                @Html.LabelFor(x => x.Peixe.Familia, "Familia")
+                @Html.TextBoxFor(x => x.Peixe.Familia)*@
+
+        </div>
+
+        @Html.LabelFor(x => x.Texto)
+        @Html.TextAreaFor(x => x.Texto, new { rows = 20, @class = "form-control input-lg textarea-editor" })
+
+        <input type="submit" name="Submit" id="Submit" value="Salvar" />
+    </div>
+}
+
+@section scripts
+{
+    @Scripts.Render("http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js")
+
+    <script>
+        $(document).ready(function () {
+            // Initialize Editor
+            $('.textarea-editor').summernote({
+                height: 300, // set editor height
+                minHeight: null, // set minimum height of editor
+                maxHeight: null, // set maximum height of editor
+                focus: true // set focus to editable area after initializing summernote
+            });
+        });
+    </script>
+}

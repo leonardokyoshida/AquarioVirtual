@@ -1,0 +1,27 @@
+﻿@model AquarioVirtual.Web.Models.Artigo
+
+
+<div class="col-lg-12 col-md-12">
+    <div class="fh5co-highlight animate-box ">
+        <div class="modal-header">
+            <h3>Dados Gerais</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <ul class="project-info ">
+                    <li><h6>PH:</h6>@Model.Peixe.PH</li>
+                    <li><h6>Familia:</h6>@Model.Peixe.Familia</li>
+                    <li><h6>Tamanho:</h6>@Model.Peixe.Tamanho</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <ul class="project-info">
+                    <li><h6>Temperatura:</h6>@Model.Peixe.Temperatura</li>
+                    <li><h6>Aquario recomendado:</h6>@Model.Peixe.TamanhoAquario</li>
+                    <li><h6>Habitat:</h6>@Model.Peixe.Habitat</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

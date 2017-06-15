@@ -1,0 +1,116 @@
+﻿@model AquarioVirtual.Web.Models.Usuario
+
+<section class="at-login-form" id="login-dp">
+    <div class="modal fade" id="at-login" tabindex="-1" role="dialog" aria-labelledby="mymodallabel">
+
+        @*<div class="modal fade" id="at-login" tabindex="-1" role="dialog" aria-labelledby="mymodallabel">*@
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                    <div class="panel panel-login">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <a href="#" class="active" id="login-form-link">Login</a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="#" id="register-form-link">Registre-se</a>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="modal-body">
+                    <div class="social-buttons">
+                        <a href="#" class="btn btn-fb" onclick="loginFace()"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        @*<a href="#" class="btn btn-tw"><i class="fa fa-twitter text-center"></i></a>*@
+                    </div>
+
+                    <div class="signup-or-separator">
+                        <span class="h6 signup-or-separator--text">ou</span>
+                        <hr>
+                    </div>
+                    @using (Html.BeginForm("Login", "Usuario", FormMethod.Post, new { @class = "login-nav", @id = "login-nav", @role = "form" }))
+            {
+                        @*<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">*@
+                        <div class="form-group">
+                            @*<label class="sr-only" for="Email">Email</label>*@
+                            @Html.ValidationMessageFor(u => u.Email)
+                            @Html.LabelFor(u => u.Email, new { @class = "sr-only" })
+                            @Html.TextBoxFor(u => u.Email, new { @class = "form-control", @placeholder = "Email" })
+                            @*<input type="email" class="form-control" id="Email" placeholder="Email" required>*@
+                        </div>
+                        <div class="form-group">
+                            @*<label class="sr-only" for="Senha">Senha</label>*@
+                            @Html.ValidationMessageFor(u => u.Senha)
+                            @Html.LabelFor(u => u.Senha, new { @class = "sr-only" })
+                            @Html.PasswordFor(u => u.Senha, new { @class = "form-control", @placeholder = "Senha" })
+                            @*<input type="password" class="form-control" id="Senha" placeholder="Senha" required>*@
+                            <div class="row">
+
+                                <div class="checkbox col-md-6">
+                                    <label>
+                                        @*<input type="checkbox" id="LembreMe"> Manter conectado?*@
+                                        @*@Html.LabelFor(u => u.LembreMe)*@
+                                        @Html.CheckBoxFor(u => u.LembreMe)
+                                        Manter conectado?
+                                    </label>
+
+                                </div>
+                                <div class="help-block text-right col-md-6">
+                                    <a href="">Esqueceu sua senha?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Logar</button>
+                        @*</form>*@
+                    }
+                    @using (Html.BeginForm("Register", "Usuario", FormMethod.Post, new { @class = "form", @id = "register-form", @role = "form", @style = "display:none" }))
+            {
+                        @*<form id="register-form" class="form" role="form" method="post" action="register" accept-charset="UTF-8" style="display: none">*@
+
+
+                        <div class="form-group">
+                            @*<label class="sr-only" for="Nome">Nome</label>*@
+                            @Html.ValidationMessageFor(u => u.Nome)
+                            @Html.LabelFor(u => u.Nome, new { @class = "sr-only" })
+                            @Html.TextBoxFor(u => u.Nome, new { @placeholder = "Nome", @class = "form-control" })
+                            @*<input type="text" class="form-control" id="Nome" placeholder="Nome" required>*@
+                        </div>
+                        <div class="form-group">
+                            @Html.ValidationMessageFor(u => u.UltimoNome)
+                            @Html.LabelFor(u => u.UltimoNome, new { @class = "sr-only" })
+                            @Html.TextBoxFor(u => u.UltimoNome, new { @placeholder = "Sobrenome", @class = "form-control" })
+                            @*<label class="sr-only" for="UltimoNome">Sobrenome</label>
+                                <input type="text" class="form-control" id="UltimoNome" placeholder="Sobrenome" required>*@
+                        </div>
+                        <div class="form-group">
+                            @Html.ValidationMessageFor(u => u.Email)
+                            @Html.LabelFor(u => u.Email, new { @class = "sr-only" })
+                            @Html.TextBoxFor(u => u.Email, new { @placeholder = "Email", @class = "form-control" })
+
+                            @*<label class="sr-only" for="Email">Email</label>
+                                <input type="email" class="form-control" id="Email" placeholder="Email" required>*@
+                        </div>
+                        <div class="form-group">
+                            @Html.ValidationMessageFor(u => u.Senha)
+                            @Html.LabelFor(u => u.Senha, new { @class = "sr-only" })
+                            @Html.TextBoxFor(u => u.Senha, new { @placeholder = "Senha", @class = "form-control" })
+
+                            @*<label class="sr-only" for="Senha">Senha</label>
+                                <input type="password" class="form-control" id="Senha" placeholder="Senha" required>*@
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Registrar-se</button>
+                        @*</form>*@
+                    }
+                </div>
+            </div>
+        </div>
+        @*</div>*@
+    </div>
+</section>

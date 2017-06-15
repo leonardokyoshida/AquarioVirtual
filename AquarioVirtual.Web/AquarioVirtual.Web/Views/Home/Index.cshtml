@@ -1,0 +1,29 @@
+﻿@model List<AquarioVirtual.Web.Models.Artigo>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Aquario Virtual</h1>
+    <p class="lead">O seu guia virtual para aquários de água doce!</p>
+</div>
+<br/><h1>Últimos artigos</h1><br/>
+<div class="row">
+    @*CARREGAR ARTIGOS AQUI*@
+
+    @foreach (var artigo in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="@artigo.Fotos.FirstOrDefault()" alt="..."/>
+                <div class="caption">
+                    <h3>@artigo.Peixe.Nome</h3>
+                    <p>@artigo.Peixe.NomeCientifico</p>
+                    <p>@artigo.DataPublicacao</p>
+                    <p><a href="@Url.Action("Details", "Artigo", new { id= artigo.Id})" class="btn btn-primary" role="button">Detalhes</a> </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

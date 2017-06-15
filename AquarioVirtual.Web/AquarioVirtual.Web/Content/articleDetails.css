@@ -1,0 +1,96 @@
+
+.project-info {
+    margin: 0px 0px 40px 0px;
+}
+
+    .project-info li {
+        list-style: none;
+        border-bottom: 1px dashed #a9a9a9;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+        .project-info li h6 {
+            display: inline;
+            margin-right: 5px;
+            font-size: 18px;
+        }
+
+.icon-chevron-left:before {
+    content: "\e922";
+}
+
+.icon-chevron-right:before {
+    content: "\e923";
+}
+
+a.fh5co-post-next{
+    margin-right: 15px;
+    right:10px;
+}
+
+a.fh5co-post-next:hover{
+    margin-right:5px;
+    right:0;
+    color: #000;
+}
+
+
+a.fh5co-post-prev{
+    margin-left: 15px;
+    left:10px;
+}
+
+a.fh5co-post-prev:hover{
+    margin-left:5px;
+    left:0;
+    color: #000;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-post-prev {
+    margin-left: 15px;
+    float: left;
+  }
+}
+.fh5co-post-prev,
+.fh5co-post-next {
+  position: fixed;
+  z-index: 999;
+  top: 60%;
+  height: 50px;
+  margin-top: -25px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-post-prev,
+  .fh5co-post-next {
+    position: relative;
+    text-align: center;
+    display: -moz-inline-stack;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+.fh5co-post-prev span,
+.fh5co-post-next span {
+  vertical-align: base;
+  width: 100px;
+}
+.fh5co-post-prev span i,
+.fh5co-post-next span i {
+  top: 7px;
+  position: relative;
+  font-size: 30px;
+  color: #000;
+}
+
+/*div#myScrollspy{
+    position:fixed;
+    top: 75%
+}*/

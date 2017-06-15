@@ -1,0 +1,313 @@
+
+/*ALTERADO --L.K 31/05/2017*/
+.profile {
+    margin: 3em 0;
+}
+
+/* Profile sidebar */
+/*ALTERADO --L.K 31/05/2017*/
+.profile-sidebar {
+    padding: 20px 0 10px 0;
+}
+
+/*ALTERADO --L.K 01/06/2017*/
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    display: inherit;
+    /*-webkit-border-radius: 80% !important;
+    -moz-border-radius: 80% !important;
+    border-radius: 80% !important;*/
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-usertitle-name {
+    color: #5a7391;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+    text-transform: uppercase;
+    color: #5b9bd1;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .profile-userbuttons .btn {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 6px 15px;
+        margin-right: 5px;
+    }
+
+        .profile-userbuttons .btn:last-child {
+            margin-right: 0px;
+        }
+
+.profile-usermenu {
+    margin-top: 10px;
+}
+
+    /*ALTERADO -- L.K 01/06/2017*/
+    .profile-usermenu ul {
+        margin-top: 10px;
+    }
+
+        /*ALTERADO -- L.K 31/05/2017*/
+        .profile-usermenu ul li {
+            border-bottom: 1px groove deepskyblue;
+        }
+            /*ALTERADO -- L.K 01/06/2017*/
+            .profile-usermenu ul li:first-child {
+                border-top: 1px groove deepskyblue;
+            }
+            /*ALTERADO -- L.K 31/05/2017*/
+            .profile-usermenu ul li a {
+                /*color: #93a3b5;*/
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+                .profile-usermenu ul li a i {
+                    margin-right: 8px;
+                    font-size: 14px;
+                }
+
+                .profile-usermenu ul li a:hover {
+                    background-color: #fafcfd;
+                    color: #5b9bd1;
+                }
+
+            /*.profile-usermenu ul li.active {
+            border-bottom: none;
+        }*/
+
+            .profile-usermenu ul li.active a {
+                color: #5b9bd1;
+                background-color: #f6f9fb;
+                border-left: 2px solid #5b9bd1;
+                margin-left: -2px;
+            }
+
+/* Profile Content */
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+
+
+
+
+/*INICIO CSS MODAL LOGIN*/
+
+/*ALTERADO -- L.K 31/05/2017*/
+#login-dp {
+    min-width: 250px;
+    overflow: hidden;
+    background-color: rgba(255,255,255,.8);
+}
+
+
+    #login-dp .help-block {
+        font-size: 12px;
+    }
+
+    /*ALTERADO -- L.K 02/06/2017*/
+    #login-dp .bottom {
+        /*background-color: rgba(255,255,255,.8);
+        border-top: 1px solid #ddd;*/
+        clear: both;
+        /*padding: 14px;*/
+    }
+
+    #login-dp .social-buttons {
+        margin: 12px 0;
+    }
+        
+        /*#login-dp .social-buttons a {
+            width: 49%;
+        }*/
+
+    #login-dp .form-group {
+        margin-bottom: 10px;
+    }
+
+    /*ALTERADO -- L.K 02/06/2017*/
+    #login-dp .form-group .checkbox {
+        font-size: 14px;
+        color: #222;
+    }
+
+    /*ALTERADO -- L.K 02/06/2017*/
+    #login-dp .social-buttons .btn-fb {
+        color: #fff ;
+        background-color: #3b5998;
+    }
+        /*ALTERADO -- L.K 31/05/2017*/
+        #login-dp .social-buttons .btn-fb:hover {
+            color: #fff;
+            background-color: #496ebc;
+        }
+
+    /*ALTERADO -- L.K 31/05/2017*/
+    #login-dp .social-buttons .btn-tw {
+        color: #fff;
+        background-color: #55acee;
+    }
+        /*ALTERADO -- L.K 31/05/2017*/
+        #login-dp .social-buttons .btn-tw:hover {
+            color: #fff;
+            background-color: #59b5fa;
+        }
+
+@media(max-width:768px) {
+    #login-dp {
+        background-color: inherit;
+        color: #fff;
+    }
+
+        #login-dp .bottom {
+            background-color: inherit;
+            border-top: 0 none;
+        }
+}
+
+
+
+/*MODAL LOGIN*/
+
+/*ALTERADO -- L.K 31/05/2017*/
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 500px;
+    }
+}
+/*ALTERADO -- L.K 31/05/2017*/
+.modal-content {
+    background: aliceblue;
+}
+
+.at-login-form .signup-or-separator {
+	background: none;
+	height: 34px;
+	position: relative;
+	text-align: center;
+}
+/*ALTERADO -- L.K 02/06/2017*/
+.at-login-form .signup-or-separator--text {
+	background-color: rgba(255, 255, 255, .15);
+	display: inline-block;
+	padding: 8px;
+}
+/*ALTERADO -- L.K 02/06/2017*/
+.at-login-form .h6 {
+    margin-top: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #757575;
+	line-height: 1.1;
+	text-rendering: optimizelegibility;
+}
+
+.at-login-form .signup-or-separator hr {
+    margin: -25px auto 10px;
+    width: 100%;	
+ }
+
+.at-login-form .btn-gst
+{
+	display: inline-block;
+padding: 6px 12px;
+margin-bottom: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.42857143;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background-image: none;
+border: 1px solid #000;
+border-radius: 0px;
+background-color: transparent;
+}
+
+/*ALTERADO -- L.K 02/06/2017*/
+ .at-login-form .ta-l
+{
+	text-align:left;
+	margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+
+ /*ALTERADO -- L.K 01/06/2017*/
+ .btn-block{
+     width: 50%;
+ }
+
+
+ /*MENU LOGIN/REGISTER MODAL LOGIN*/
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #f0f8ff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+	color: #029f5b;
+	font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+
+
+#fh5co-offcanvas .fh5co-menu ul li .panel-login>.panel-heading a.active {
+	color: #029f5b;
+	font-size: 18px;
+}
+
+.panel>.panel-heading{
+    border: none;
+
+}

@@ -1,0 +1,86 @@
+﻿@model AquarioVirtual.Web.Models.Artigo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@section css{
+    <link href="~/Content/articleDetails.css" rel="stylesheet" />
+    <link href="~/Content/123.css" rel="stylesheet" />
+}
+
+
+
+<div class="container-fluid">
+
+    <div class="row fh5co-post-entry single-entry">
+
+
+        @*<a href="@Url.Action("Details", "Artigo", new { id = 0  })" class="fh5co-post-prev btn-default"><h4><span>Anterior</span></h4></a>
+            <a href="@Url.Action("Details", "Artigo", new { id = 2  })" class="fh5co-post-next btn-default"><h4><span>Proximo</span></h4></a>*@
+
+
+        <article class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+
+            @*CARREGAR PEIXE E ARTIGO *@
+            <h2 class="fh5co-article-title animate-box">@Model.Peixe.Nome</h2>
+            <h4 class="fh5co-article-subtitle animate-box">@Model.Peixe.NomeCientifico</h4>
+
+            <span class="fh5co-meta fh5co-date animate-box">@Model.DataPublicacao</span>
+
+            @*AVALIAR COMO FAZER COM AS IMAGENS*@
+            <figure class="animate-box col-md-offset-3">
+                <img src="@Model.Fotos.First()" alt="Image" class="img-responsive">
+            </figure>
+            @*AVALIAR O QUE SERÁ COLOCADO AQUI*@
+            @*<span class="fh5co-meta animate-box"><a href="@Url.Action("Index","Home")">Ciclídeos</a></span>*@
+
+            <div class="row">
+
+                <div class="text-left content-article">
+                    @*Inicio Dados Gerais*@
+                    <section id="dados-gerais">
+                        <div class="row">
+                            @Html.Partial("_DadosGerais", Model)
+                        </div>
+                    </section>
+
+                    @*Fim Dados Gerais*@
+                    @*ARTIGO*@
+
+                    @Html.Raw(Model.Texto)
+
+                    @*<section id="pag2">
+                        </section>*@
+
+                </div>
+
+            </div>
+        </article>
+
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+
+            @if (Session["userId"] != null)
+            {
+                @Html.ActionLink("Editar artigo", "Edit",new { id = Model.Id })
+
+            }
+            <div class="navbar " id="myScrollspy">
+                @*<ul class="nav nav-tabs nav-stacked" data-offset-top="120" data-spy="affix">
+
+                        @*TITULOS DO ARTIGO
+                        <li><a href="#dados-gerais">Dados Gerais</a></li>
+                        <li><a href="#pag2">Alimentação</a></li>
+                        <li><a href="#pag3">Reprodução</a></li>
+                    </ul>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.waypoints.min.js"></script>
+    <script src="~/Scripts/scrolling-nav.js"></script>
+}

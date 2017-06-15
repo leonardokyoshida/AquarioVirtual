@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/font-awesome.min.css")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/menuStyle.css")
+    @Styles.Render("~/Content/style.css")
+    @Styles.Render("~/Content/animate.css")
+    @Styles.Render("http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic|Roboto:400,300,700")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("css", required: false)
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+
+    <div class="row">
+
+        <div class="col-md-1">
+            @Html.Partial("_Menu")
+
+        </div>
+        <div class="col-md-10">
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Aquario Virtual</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/main.js")
+    @Scripts.Render("~/Scripts/jquery.waypoints.min.js")
+    @Scripts.Render("~/Scripts/facebook.js")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquarioVirtual.WebAPI", "AquarioVirtual.WebAPI\AquarioVirtual.WebAPI.csproj", "{65275B98-4599-4319-A0B4-32443AC00FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquarioVirtual.Web.Application", "AquarioVirtual.Web.Application\AquarioVirtual.Web.Application.csproj", "{C18A3B69-B8A7-4B83-B232-4BA4046F50CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquarioVirtual.Domain", "AquarioVirtual.Domain\AquarioVirtual.Domain.csproj", "{370304D0-4252-4607-A316-AFE77FBC3874}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquarioVirtual.Infra", "AquarioVirtual.Infra\AquarioVirtual.Infra.csproj", "{C45905DF-44A4-405F-88F5-3FE038213406}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquarioVirtual.Utils", "AquarioVirtual.Utils\AquarioVirtual.Utils.csproj", "{683E1225-3AAA-4755-AC1B-FB7346BDD346}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65275B98-4599-4319-A0B4-32443AC00FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65275B98-4599-4319-A0B4-32443AC00FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65275B98-4599-4319-A0B4-32443AC00FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65275B98-4599-4319-A0B4-32443AC00FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C18A3B69-B8A7-4B83-B232-4BA4046F50CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C18A3B69-B8A7-4B83-B232-4BA4046F50CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C18A3B69-B8A7-4B83-B232-4BA4046F50CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C18A3B69-B8A7-4B83-B232-4BA4046F50CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370304D0-4252-4607-A316-AFE77FBC3874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370304D0-4252-4607-A316-AFE77FBC3874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370304D0-4252-4607-A316-AFE77FBC3874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370304D0-4252-4607-A316-AFE77FBC3874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C45905DF-44A4-405F-88F5-3FE038213406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45905DF-44A4-405F-88F5-3FE038213406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45905DF-44A4-405F-88F5-3FE038213406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45905DF-44A4-405F-88F5-3FE038213406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683E1225-3AAA-4755-AC1B-FB7346BDD346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683E1225-3AAA-4755-AC1B-FB7346BDD346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683E1225-3AAA-4755-AC1B-FB7346BDD346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683E1225-3AAA-4755-AC1B-FB7346BDD346}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://evo4systems.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AquarioVirtual.WebAPI\\AquarioVirtual.WebAPI.csproj
+		SccProjectName1 = AquarioVirtual.WebAPI
+		SccLocalPath1 = AquarioVirtual.WebAPI
+		SccProjectUniqueName2 = AquarioVirtual.Web.Application\\AquarioVirtual.Web.Application.csproj
+		SccProjectName2 = AquarioVirtual.Web.Application
+		SccLocalPath2 = AquarioVirtual.Web.Application
+		SccProjectUniqueName3 = AquarioVirtual.Domain\\AquarioVirtual.Domain.csproj
+		SccProjectName3 = AquarioVirtual.Domain
+		SccLocalPath3 = AquarioVirtual.Domain
+		SccProjectUniqueName4 = AquarioVirtual.Infra\\AquarioVirtual.Infra.csproj
+		SccProjectName4 = AquarioVirtual.Infra
+		SccLocalPath4 = AquarioVirtual.Infra
+		SccProjectUniqueName5 = AquarioVirtual.Utils\\AquarioVirtual.Utils.csproj
+		SccProjectName5 = AquarioVirtual.Utils
+		SccLocalPath5 = AquarioVirtual.Utils
+	EndGlobalSection
+EndGlobal
