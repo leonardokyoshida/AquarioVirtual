@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding Artigo.Peixe.Nome}"
+             x:Class="AquarioVirtual.App.Views.DetailPageView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" BackgroundColor="#ffd27a">
+                <Label Text="{Binding Artigo.Peixe.Nome}"
+								    Margin="20, 10, 20, 0"
+								    FontAttributes="Bold" 
+                                    TextColor="Red"
+                                    FontSize="Large"
+                                    HorizontalOptions="Center"/>
+                <!--<forms:CarouselView ItemsSource="{Binding Artigo.Fotos}">
+                    <forms:CarouselView.ItemTemplate>
+                        <DataTemplate>-->
+                <Image Source="{Binding Artigo.Slug}" Aspect="Fill" />
+                <!--</DataTemplate>
+                    </forms:CarouselView.ItemTemplate>
+                </forms:CarouselView>-->
+                <Label Text="{Binding Artigo.Texto}"
+                                    Margin="20, 5, 20, 15"
+                                    TextColor="Black"
+                                    FontSize="Medium" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             BackgroundColor="#4b67a1"
+             Title="Social Login"
+             x:Class="AquarioVirtual.App.Views.LoginPageView">
+    <ContentPage.Content BackgroundColor="#5777ba">
+        <Grid Padding="10" BackgroundColor="#5777ba">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="#5777ba">
+                <Button VerticalOptions="Center" Margin="0,100,0,0" BorderColor="Black" Grid.Row="1" Command="{Binding LoginCommand}" BackgroundColor="#4b67a1" TextColor="White" HorizontalOptions="Center" Text="{Binding Texto}"/>
+                <Label Text="Todos os direitos reservados" Margin="0,100,0,0" HorizontalOptions="Center" Grid.Row="2" FontSize="Micro" TextColor="White"></Label>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

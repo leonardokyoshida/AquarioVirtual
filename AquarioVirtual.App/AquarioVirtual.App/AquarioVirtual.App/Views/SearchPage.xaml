@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             Title="Wiki's"
+             x:Class="AquarioVirtual.App.Views.SearchPage">
+    <StackLayout>
+        <Entry Placeholder="Pesquisar" Text="{Binding SearchTerm, Mode=TwoWay}"/>
+        <Button Text="Buscar" Command="{Binding SearchCommand}"/>
+        <ListView ItemsSource="{Binding Artigos}" VerticalOptions="FillAndExpand" BackgroundColor="#ffd27a">
+            <ListView.RowHeight>
+                <OnPlatform x:TypeArguments="x:Int32" iOS="70" Android="70" WinPhone="100" />
+            </ListView.RowHeight>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                               Source="{Binding Slug}"
+                               VerticalOptions="Center" />
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="{Binding Peixe.Nome}" FontSize="22" TextColor="Red"/>
+                                <Label Text="{Binding Peixe.NomeCientifico}" TextColor="Black" FontSize="16" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

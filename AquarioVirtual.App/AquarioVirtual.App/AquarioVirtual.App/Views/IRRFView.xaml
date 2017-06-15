@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:behaviors="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             NavigationPage.HasNavigationBar="True"
+             x:Class="AquarioVirtual.App.Views.IRRFView">
+  <ContentView.Content>
+      <StackLayout>
+            <Entry Text="{Binding txtSalary}" ></Entry>
+            <Label Text="Salario Bruto: "/>
+            <Entry Text="{Binding Salary.GrossSalary}"/>
+            <Label Text="Salario Liquido: "/>
+            <Entry Text="{Binding Salary.NetSalary}"/>
+            <Label Text="IRRF: "/>
+            <Entry Text="{Binding Salary.Tax}"/>
+            <Button Command="{Binding IRRFCommand}" Text="Obter IRRF"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentPage>
